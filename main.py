@@ -1,6 +1,6 @@
 import speech
 import text
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -24,6 +24,13 @@ def showHomePage():
             user_input = input("Hello! Please choose 1 for Text and 2 for Speech.\n Choose 0 to EXIT.\n")
 
     return "This is home page"
+
+
+@app.route("/test", methods=["POST"])
+def test():
+    text = request.form["test"]
+    print(text)
+    return "received"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

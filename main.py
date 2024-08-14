@@ -1,6 +1,6 @@
 import speech
 import text
-from flask import Flask, request
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
@@ -26,12 +26,13 @@ def showHomePage():
     return "This is home page"
 
 
-@app.route("/test", methods=["POST"])
+@app.route("/test", methods=["GET"])
 def test():
     text_test = request.form["test"]
     print(text_test)
-    text.run(text_test)
-    return "received"
+    result = text.run(text_test)
+    return jsonify("ok")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")

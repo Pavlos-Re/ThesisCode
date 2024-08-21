@@ -26,12 +26,13 @@ def showHomePage():
     return "This is home page"
 
 
-@app.route("/test", methods=["GET"])
+@app.route("/test", methods=["POST"])
 def test():
     text_test = request.form["test"]
     print(text_test)
     result = text.run(text_test)
-    return jsonify("ok")
+    result = "test"
+    return jsonify({"test": result})
 
 
 if __name__ == "__main__":

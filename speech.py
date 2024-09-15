@@ -38,7 +38,7 @@ def convert_to_to_wav(input_file, output_file):
 def run():
     paths = []
     labels = []
-    for dirname, _, filenames in os.walk('/home/pavlos/Desktop/test'):
+    for dirname, _, filenames in os.walk('test'):
         for filename in filenames:
             paths.append(os.path.join(dirname, filename))
             label = filename.split('_')[-1]
@@ -204,11 +204,14 @@ def run():
         predicted_emotion = enc.inverse_transform(prediction)[0][0]
         return predicted_emotion
 
-    input_file = 'audio.wav'
-    output_file = 'audio2.wav'
-    convert_to_to_wav(input_file, output_file)
+    #input_file = 'audio.wav'
+    #output_file = 'audio2.wav'
+    output_file = 'ps.wav'
+    #convert_to_to_wav(input_file, output_file)
 
     # Test the model with a new audio file
     test_audio_path = output_file
     predicted_emotion = predict_emotion(test_audio_path)
     print(f'The predicted emotion for the test audio is: {predicted_emotion}')
+
+    return predicted_emotion

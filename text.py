@@ -97,8 +97,33 @@ def advice(advice_result):
                     }
                 ]
             }
+        if  advice_result == "nervousness":
+            advice_list = {
+                "AdviceList": [
+                    {
+                        "Title": "Practice deep breathing.",
+                        "Advice": "Take a few deep breaths. Go slow and breathe through your nose, filling your lungs with air. Then, slowly breathe out through your nose. Repeat a few times until you feel yourself calming down."
+                    },
+                    {
+                        "Title": "Listen to calming music",
+                        "Advice": "Pop on your headphones and listen to some calming tunes — think classical music or nature sounds. But whatever you enjoy, whether that’s rap or heavy metal, should do the trick."
+                    },
+                    {
+                        "Title": "Talk to a friend",
+                        "Advice": "Feeling nervous? It may be time to phone (or text) a friend. By confiding in those closest to you, not only does it help you voice your concerns, but your support system can also give you advice and help you calm down."
+                    },
+                    {
+                        "Title": "Get moving",
+                        "Advice": "Exercise can be beneficial for a lot of different reasons. Physical activity releases endorphins, which are chemicals that help relieve pain and reduce stress."
+                    },
+                    {
+                        "Title": "Admit that you’re nervous",
+                        "Advice": "If you try to ignore your nerves, it can become the only thing you focus on.And don’t forget that we all get nervous — it’s a natural part of life. But how you act or feel when you’re nervous doesn’t have to consume your life. Once you learn how to calm yourself down and you find something that works for you, stick with it."
+                    }
+                ]
+            }
 
         return advice_list
 
-#if __name__ == "__main__":
-#    run("Killing myself")
+if __name__ == "__main__":
+   run("the date was a very nice day")

@@ -226,6 +226,10 @@ import pyttsx3
 import wave
 from moviepy.editor import AudioFileClip
 
+import text
+from main import test
+
+
 def convert_to_to_wav(input_file, output_file):
     try:
         # Load the WAV audio file
@@ -240,7 +244,7 @@ def convert_to_to_wav(input_file, output_file):
         print(f"Error: {e}")
 
 
-def test():
+def speech():
     r = sr.Recognizer()
 
     from pydub import AudioSegment
@@ -259,6 +263,7 @@ def test():
     response = r.recognize_google(audio)
 
     print(response)
+    return text.run(response)
 
-if __name__ == "__main__":
-    test()
+# if __name__ == "__main__":
+#     test()

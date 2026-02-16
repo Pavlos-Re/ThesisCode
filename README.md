@@ -1,1 +1,1 @@
-Main project files for the server-side of my Thesis Project. Flask and Large Language Models were used to create the functionality.
+Main project files for the server-side of my Thesis Project Development of a Psychological Wellbeing Application with Personalized Support and Customized Advice. Flask and Large Language Models were used to create the functionality. text messages are being send form the Android App, and after the LLM finds the main emotion, a list is being send back to the user with advices accordingly.
